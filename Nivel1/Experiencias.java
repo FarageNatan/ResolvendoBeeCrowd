@@ -28,11 +28,19 @@ public class Experiencias {
             }
         }
 
-        double percCoelhos = (double)(contadorC / contadorTotal) * 100;
-        double percRatos = (double)(contadorR / contadorTotal) * 100;
-        double percSapos = (double)(contadorS / contadorTotal) * 100;
+        double percCoelhos = (double)(contadorC * 100.00) / contadorTotal;
+        double percRatos = (double)(contadorR * 100.00 ) / contadorTotal;
+        double percSapos = (double)(contadorS * 100.00) / contadorTotal;
 
-        System.out.println("Total: " + contadorTotal + " cobaias\n" + "Total de coelhos: " + contadorC + "\nTotal de ratos: " + contadorR + "\nTotal de sapos: " + contadorS + "\nPercentual de coelhos: " + percCoelhos + "\nPercentual de ratos: " + percRatos + "\nPercentual de sapos: " + percSapos);
+        System.out.println("Total: " + contadorTotal + " cobaias");
+        System.out.println("Total de coelhos: " + contadorC);
+        System.out.println("Total de ratos: " + contadorR);
+        System.out.println("Total de sapos: " + contadorS);
+
+        System.out.printf("Percentual de coelhos: %.2f %%\n", percCoelhos);
+        System.out.printf("Percentual de ratos: %.2f %%\n", percRatos);
+        System.out.printf("Percentual de sapos: %.2f %%\n", percSapos);
+
 
         sc.close();
     }
