@@ -28,6 +28,22 @@ void ordenacaoSelecao(int* vet, int tam){
 	}
 }
 
+//Versao Decrescente
+void selecaoDecrescente(int* vet, int tam){
+	for(int i = 0; i < (tam - 1); i++){
+		int maior = i;
+		for(int j = (i + 1); j < tam; j++){
+			if(vet[j] > vet[maior]){
+				maior = j;
+			}
+		}
+		swap(vet, maior, i);
+        printf("Passagem: %d\n", i);
+        imprimeVetor(vet, tam);
+	}
+}
+
+
 void preencheVetor(int* vet, int tamVet){
     printf("Preencher Vetor: \n");
 	for(int i = 0; i < tamVet; i++){
@@ -43,9 +59,9 @@ int main(){
 	scanf("%d", &tamVet);	
 	int vetor[tamVet];
 	preencheVetor(vetor, tamVet);
-	ordenacaoSelecao(vetor, tamVet);
-	//printf("Vetor Ordenado: \n");
-	//imprimeVetor(vetor, tamVet);
+	selecaoDecrescente(vetor, tamVet);
+	printf("Vetor Ordenado: \n");
+	imprimeVetor(vetor, tamVet);
 
 	return 0;
 }
